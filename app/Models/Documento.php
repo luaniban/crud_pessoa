@@ -10,5 +10,9 @@ class Documento extends Model
     use HasFactory;
 
 
-     protected $table = "enderecos";
+     protected $fillable = [
+        'cpf',
+        'rg',
+        'cnh',
+    ];
 }

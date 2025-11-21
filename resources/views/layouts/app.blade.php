@@ -9,8 +9,10 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <!-- Adicionar o CSS do Livewire -->
+
+    <tallstackui:script />
     @livewireStyles
-    
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Adicionar outros CSS ou fontes -->
     @stack('styles')
 </head>
