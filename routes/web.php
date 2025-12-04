@@ -37,19 +37,21 @@ Route::get('/export-csv-enderecos', function () {
     ]);
 })->name("export-csv-enderecos");
 
-Route::get('/export-json-enderecos', function () {
-    $users = User::with('endereco')->get();
+
+Route::get('/export-json-documentos', function () {
+    $users = User::with('documento')->get();
 
     // Montar estrutura JSON
     $data = $users->map(function ($user) {
         return [
-            'id'      => $user->id,
-            'name'    => $user->name,
-            'email'   => $user->email,
-            'endereco' => [
-                'rua'    => $user->endereco->rua ?? null,
-                'bairro' => $user->endereco->bairro ?? null,
-            ]
+            'id'       => $user->id,
+            'name'     => $user->name,
+            'email'    => $user->email,
+            'documento' => [
+                'cpf' => $user->documento->cpf ?? null,
+                'rg'  => $user->documento->rg ?? null,
+                'cnh' => $user->documento->cnh ?? null,
+            ],
         ];
     });
 
@@ -57,8 +59,8 @@ Route::get('/export-json-enderecos', function () {
 
     return Response::make($json, 200, [
         'Content-Type' => 'application/json',
-        'Content-Disposition' => 'attachment; filename="usuarios_enderecos.json"',
+        'Content-Disposition' => 'attachment; filename="usuarios_documentos.json"',
     ]);
-})->name("export-json-enderecos");
+})->name("export-json-documentos");
 
 route::get('/export-pdf-usuarios', 'App\Http\Controllers\Pdf\PDFUsuariosController')->name('export-pdf-usuarios');

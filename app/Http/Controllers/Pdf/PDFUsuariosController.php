@@ -18,6 +18,6 @@ class PDFUsuariosController extends Controller
 
         return Pdf::loadView('pdf.usuarios', compact('usuarios'))
             ->setPaper('a4', 'portrait')
-            ->download('classificacao.pdf');
+            ->download('usuarios.pdf');
     }
 }

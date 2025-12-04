@@ -2,11 +2,11 @@
     <h1 class="text-2xl font-bold mb-6">Usuários</h1>
 
     <div class="flex justify-end mb-4 gap-4">
-        <a href="{{ route('export-json-enderecos') }}" >
+        <a href="{{ route('export-json-documentos') }}" >
 
             <button
             class="bg-yellow-700 hover:bg-yellow-800 transition text-white rounded-lg px-4 py-2 font-semibold shadow">
-            Download JSON
+            Download Documentos JSON
             </button>
             </a>
 
@@ -14,7 +14,7 @@
 
         <button
         class="bg-green-600 hover:bg-green-700 transition text-white rounded-lg px-4 py-2 font-semibold shadow">
-        Download CSV
+        Download Enderecos CSV
         </button>
         </a>
 
@@ -22,7 +22,7 @@
 
             <button
             class="bg-red-700 hover:bg-red-800 transition text-white rounded-lg px-4 py-2 font-semibold shadow">
-            Download pdf
+            Download Usuários pdf
             </button>
             </a>
 
