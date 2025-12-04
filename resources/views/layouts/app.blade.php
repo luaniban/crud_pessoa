@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Título Padrão')</title>
+    <title>@yield('title', 'Atividade Nelson')</title>
 
     <!-- Incluir o CSS padrão do Laravel (se necessário) -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    
+
 
         <!-- Conteúdo principal -->
         <div class="container mt-4">
