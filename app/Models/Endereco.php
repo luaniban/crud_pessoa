@@ -15,4 +15,9 @@ class Endereco extends Model
         'rua',
         'bairro',
     ];
+
+    public function users()
+    {
+        return $this->hasMany(User::class, 'endereco_id');
+    }
 }

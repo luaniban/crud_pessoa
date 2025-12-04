@@ -15,4 +15,12 @@ class Documento extends Model
         'rg',
         'cnh',
     ];
+
+
+
+    public function user()
+    {
+        return $this->hasOne(User::class, 'documento_id');
+    }
+
 }

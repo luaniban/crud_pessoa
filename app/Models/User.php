@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'endereco_id',
+        'documento_id'
     ];
 
     /**
@@ -42,4 +44,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+
+
+    public function endereco()
+    {
+        return $this->belongsTo(Endereco::class);
+    }
+
+    public function documento()
+    {
+        return $this->belongsTo(Documento::class, 'documento_id');
+    }
+
 }
